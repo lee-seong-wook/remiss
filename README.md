@@ -1,4 +1,4 @@
-# ReMiss: Missed-Object History for Data Scheduling in Driving-Scene Object Detection
+# ReMiss
 
 This repository accompanies the paper **"ReMiss: Missed-Object History for Data Scheduling in Driving-Scene Object Detection"**, published in *Computers, Materials & Continua (CMC)*, 2026.
 
