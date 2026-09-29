@@ -50,16 +50,3 @@ Average precision is an aggregate metric: it does not tell you *which* annotated
 }
 ```
 
-## Repository Structure
-
-```
-remiss/
-├── README.md
-├── .gitignore
-├── requirements.txt
-├── figures/   # figures extracted from the paper
-├── configs/
-├── docs/
-├── scripts/
-└── src/
-```
