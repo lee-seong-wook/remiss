@@ -1,1 +1,1 @@
-# Dependencies will be pinned here as the experiment code is released.
+# Python dependencies
