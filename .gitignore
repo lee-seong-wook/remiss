@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Data and outputs
+data/
+outputs/
+logs/
+prediction_results/
+checkpoints/
+
+# Jupyter and local files
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Model artifacts
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.pkl
+*.nii
+*.nii.gz
