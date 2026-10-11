@@ -1,0 +1,29 @@
+backbone:
+  name: resnet50
+  pretrained: DEFAULT
+  trainable_layers: 3
+
+rpn:
+  pre_nms_top_n_train: 2000
+  pre_nms_top_n_test: 1000
+  post_nms_top_n_train: 2000
+  post_nms_top_n_test: 1000
+  nms_thresh: 0.7
+  score_thresh: 0.0
+  fg_iou_thresh: 0.7
+  bg_iou_thresh: 0.3
+  batch_size_per_image: 256
+  positive_fraction: 0.5
+
+roi_head:
+  box_score_thresh: 0.05
+  box_nms_thresh: 0.5
+  box_detections_per_img: 100
+  box_fg_iou_thresh: 0.5
+  box_bg_iou_thresh: 0.5
+  box_batch_size_per_image: 512
+  box_positive_fraction: 0.25
+
+transform:
+  min_size: 800
+  max_size: 1333

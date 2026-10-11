@@ -1,0 +1,53 @@
+seed: 42
+device: auto
+amp: true
+output_dir: runs/train
+
+data:
+  train_images: ${TRAIN_IMAGES}
+  train_annotations: ${TRAIN_ANNOTATIONS}
+  val_images: ${VAL_IMAGES}
+  val_annotations: ${VAL_ANNOTATIONS}
+
+loader:
+  batch_size: 16
+  num_workers: 8
+  pin_memory: true
+  shuffle: true
+
+optimizer:
+  name: adamw
+  lr: 0.0001
+  betas: [0.9, 0.999]
+  weight_decay: 0.0001
+
+scheduler:
+  name: multistep
+  unit: epoch
+  milestones: [11]
+  gamma: 0.1
+
+train:
+  epochs: 12
+  max_iterations: null
+  grad_clip_norm: 1.0
+  log_interval: 500
+  eval_every_epochs: 1
+  eval_every_iterations: null
+
+checkpoint:
+  dir: checkpoints
+  resume: null
+  resume_optimizer: true
+  resume_scheduler: false
+  reset_optimizer_lr: false
+  save_last: true
+  save_best: true
+  save_every_epochs: 20
+  monitor: bbox_mAP_50_95
+  mode: max
+
+metrics:
+  type: coco_detection
+  iou_types: [bbox]
+  primary: bbox_mAP_50_95

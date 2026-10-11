@@ -1,0 +1,19 @@
+enabled: true
+
+mining:
+  type: offline
+  start_epoch: 5
+  interval_epoch: 3
+
+matching:
+  score_threshold: auto
+  iou_threshold: auto
+
+target:
+  miss_threshold: 2
+
+models:
+  dino:
+    matching:
+      score_threshold: 0.05
+      iou_threshold: 0.5

@@ -1,0 +1,23 @@
+arch: dino
+
+backend:
+  builder: remiss.models.idea_dino:build_idea_dino_components
+  kwargs:
+    dino_root: third-party/DINO
+    config_file: config/DINO/DINO_4scale.py
+    checkpoint: null
+    finetune_ignore:
+      - label_enc.weight
+      - class_embed
+    disable_torchvision_pretrained_backbone: true
+
+loss:
+  class_weight: 1.0
+  bbox_weight: 5.0
+  giou_weight: 2.0
+
+inference:
+  topk: 300
+  score_thresh: 0.0
+  use_nms: false
+  nms_thresh: 0.5

@@ -1,0 +1,8 @@
+enabled: true
+start_epoch: 5
+replay_ratio: 0.075
+beta: 1.0
+temperature: 1.0
+max_image_weight: 5.0
+min_image_weight: 1.0
+max_replays_per_gt_per_epoch: 4

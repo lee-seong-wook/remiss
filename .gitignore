@@ -1,35 +1,25 @@
-# Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
 *.so
-.pytest_cache/
-.mypy_cache/
-
-# Environments
+*.egg-info/
+build/
+dist/
 .venv/
 venv/
-env/
-
-# Data and outputs
-data/
-outputs/
-logs/
-prediction_results/
-checkpoints/
-
-# Jupyter and local files
 .ipynb_checkpoints/
 .DS_Store
 Thumbs.db
 
-# Model artifacts
+.env
+data/
+runs/
+checkpoints/
+outputs/
+logs/
+
 *.pt
 *.pth
 *.ckpt
 *.npy
 *.npz
 *.pkl
-*.nii
-*.nii.gz

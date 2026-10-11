@@ -1,0 +1,34 @@
+[project]
+name = "remiss"
+version = "1.0.0"
+description = "ReMiss: Missed-Object History for Data Scheduling in Driving-Scene Object Detection"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.5",
+    "torchvision>=0.20",
+    "numpy",
+    "scipy",
+    "pillow",
+    "pycocotools",
+    "pyyaml",
+    "python-dotenv",
+    "addict",
+    "yapf",
+    "termcolor",
+    "timm",
+    "cython",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["remiss*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["third-party"]

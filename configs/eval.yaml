@@ -1,0 +1,26 @@
+device: auto
+amp: false
+output_dir: runs/eval
+
+data:
+  images: ${VAL_IMAGES}
+  annotations: ${VAL_ANNOTATIONS}
+
+loader:
+  batch_size: 16
+  num_workers: 8
+  pin_memory: true
+  shuffle: false
+
+checkpoint:
+  path: runs/train/checkpoints/best.pt
+
+metrics:
+  type: coco_detection
+  iou_types: [bbox]
+  primary: bbox_mAP_50_95
+
+eval:
+  log_interval: 20
+  save_predictions: false
+  predictions_path: null
